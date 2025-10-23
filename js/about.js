@@ -59,21 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.head.appendChild(style);
 });
 
-// Team member hover effect enhancement
-document.addEventListener('DOMContentLoaded', function () {
-    const teamMembers = document.querySelectorAll('.team-member');
-
-    teamMembers.forEach(function (member) {
-        member.addEventListener('mouseenter', function () {
-            this.style.transform = 'translateY(-10px)';
-        });
-
-        member.addEventListener('mouseleave', function () {
-            this.style.transform = 'translateY(0)';
-        });
-    });
-});
-
 // Stats counter animation
 document.addEventListener('DOMContentLoaded', function () {
     const statNumbers = document.querySelectorAll('.stat-number');

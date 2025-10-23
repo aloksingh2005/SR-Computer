@@ -80,6 +80,7 @@
 .image-placeholder i {
     color: var(--accent-purple);
     margin-bottom: 1rem;
+    font-size: 3rem;
 }
 
 .image-placeholder p {
@@ -105,6 +106,13 @@
 .mission-item {
     text-align: center;
     padding: 2rem;
+    background: var(--primary-bg);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.mission-item:hover {
+    transform: translateY(-5px);
 }
 
 .mission-icon {
@@ -139,6 +147,8 @@
 .value-card {
     padding: 2rem;
     text-align: center;
+    background: var(--secondary-bg);
+    border-radius: 10px;
     transition: all 0.3s ease;
 }
 
@@ -182,6 +192,13 @@
 .team-member {
     padding: 2rem;
     text-align: center;
+    background: var(--primary-bg);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
 }
 
 .member-image {
@@ -189,7 +206,7 @@
 }
 
 .member-image .image-placeholder {
-    background: var(--primary-bg);
+    background: var(--secondary-bg);
     border-radius: 50%;
     width: 150px;
     height: 150px;
@@ -197,6 +214,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.member-image .image-placeholder i {
+    font-size: 3rem;
+    color: var(--accent-purple);
 }
 
 .member-info h3 {
@@ -210,6 +232,7 @@
     color: var(--accent-purple);
     font-weight: 600;
     margin-bottom: 1rem;
+    font-size: 1rem;
 }
 
 .member-bio {
@@ -231,7 +254,7 @@
 .stat-item {
     text-align: center;
     padding: 2rem;
-    background: var(--secondary-bg);
+    background: var(--primary-bg);
     border-radius: 10px;
     transition: all 0.3s ease;
 }
@@ -338,5 +361,14 @@
 
     .about-stats {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .team-member {
+        padding: 1.5rem;
+    }
+    
+    .member-image .image-placeholder {
+        width: 120px;
+        height: 120px;
     }
 }
