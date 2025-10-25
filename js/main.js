@@ -1,5 +1,17 @@
 // Main JavaScript file for global functionality
 
+// Load theme toggle script dynamically
+function loadThemeToggle() {
+    const script = document.createElement('script');
+    script.src = 'js/theme-toggle.js';
+    script.onload = function() {
+        if (typeof initThemeToggle === 'function') {
+            initThemeToggle();
+        }
+    };
+    document.head.appendChild(script);
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -81,6 +93,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   `;
     document.head.appendChild(style);
+    
+    // Load theme toggle functionality
+    loadThemeToggle();
 });
 
 // Utility function to show messages

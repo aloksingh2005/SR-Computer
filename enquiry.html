@@ -175,6 +175,20 @@
                     if (typeof window.initHeader === 'function') {
                         window.initHeader();
                     }
+                    // Initialize theme toggle after header is loaded
+                    if (typeof window.initThemeToggle === 'function') {
+                        window.initThemeToggle();
+                    } else {
+                        // If initThemeToggle is not available, try to load the script
+                        const script = document.createElement('script');
+                        script.src = 'js/theme-toggle.js';
+                        script.onload = function() {
+                            if (typeof window.initThemeToggle === 'function') {
+                                window.initThemeToggle();
+                            }
+                        };
+                        document.head.appendChild(script);
+                    }
                 })
                 .catch(error => console.error('Error loading header:', error));
 
